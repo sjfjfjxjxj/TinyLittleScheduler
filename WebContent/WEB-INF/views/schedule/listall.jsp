@@ -59,7 +59,7 @@
 	            
  	           	<form action = "/member/logout.do" method="post"> 
 	                 <div id="login-area5"><a href="/member/myInfo?mem-id=${sessionScope.memId}">${sessionScope.memId}님</a> 안녕하세요!</div>
-	                    <div id="login-area6"><a href=/member/logout.do><img src="/resources/logout.png" alt="로그아웃" id="logout" ></a></div>
+	                 <div id="login-area6"><a href=/member/logout.do><img src="/resources/logout.png" alt="로그아웃" id="logout" ></a></div>
 	                   
  	        	</form> 
 	        	    
@@ -72,7 +72,7 @@
 	                    <li ><a href="#">개인 일정만 보기</a></li>
 	                    <li ><a href="#">날짜검색으로 일정 보기</a></li>
 	                    <li >¤</li>
-	                    <li ><a href="/schedule/write?mem-id=${sessionScope.memId}">새 일정 입력하기</a></li>
+	                    <li ><a href="/schedule/write?mem-id=${sessionSope.memId}">새 일정 입력하기</a></li>
 	                    <li ><a href="#">일정 수정하기</a></li>
 	                    <li ><a href="#">일정 삭제하기</a></li>
                 	</ul>
@@ -85,21 +85,21 @@
 	        </nav>
 	    </div>
 	    <main>
-<%-- 	    <c:forEach items ="{schList}" var="schedule"> --%>
-<!-- 	     <ul> -->
-<!--                 <li class="when-howmanycases"> -->
-<!--                     [yyyy]년 [mm]월 [dd]일 - [n]건 -->
-<!--                     <li class="officheck-3wh"> -->
-<!--                     	[공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요 -->
-<%-- <%--                         ${schedule.scheOfficialCheck} | ${schedule.scheToWhere}에서 [schedule.scheWithWhom]랑 [schedule.scheTodo]을 할 예정이에요 --%> --%>
-<!--                     </li>     -->
-<!--                     <li class="officheck-3wh"> -->
-<!--                         [공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요 -->
-<!--                     </li> -->
-<!--                 </li> -->
+	    <c:forEach items ="{schList}" var="schedule">
+	     <ul>
+                <li class="when-howmanycases">
+                    [yyyy]년 [mm]월 [dd]일 - [n]건
+                    <li class="officheck-3wh">
+                    	[공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                        ${schedule.scheOfficialCheck} | ${schedule.scheToWhere}에서 [schedule.scheWithWhom]랑 [schedule.scheTodo]을 할 예정이에요
+                    </li>    
+                    <li class="officheck-3wh">
+                        [공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                    </li>
+                </li>
           
-<!--             </ul> -->
-<%--             </c:forEach> --%>
+            </ul>
+            </c:forEach>
 	    
          
 	    </main>

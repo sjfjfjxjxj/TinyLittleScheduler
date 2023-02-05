@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>나 의 정 보</title>
-<link rel="stylesheet" href="/resources/css/main.css">
+<title>새 일 정 등 록</title>
+<link rel="stylesheet" href="/resources/css/write.css">
 </head>
 <body>
 <c:if test = "${sessionScope.memId ne null}">
@@ -17,7 +17,7 @@
                 
                	<form action = "/member/logout.do" method="post"> 
 	                 <div id="login-area5"><a href="/member/myInfo?mem-id=${sessionScope.memId}">${sessionScope.memId}님</a> 안녕하세요!</div>
-	                    <div id="login-area6"><a href=/member/logout.do><img src="/resources/logout.png" alt="로그아웃" id="logout" ></a></div>
+	                 <div id="login-area6"><a href=/member/logout.do><img src="/resources/logout.png" alt="로그아웃" id="logout" ></a></div>
 	                   
  	        	</form> 
             	    
@@ -37,7 +37,7 @@
                 </div>
                 <div id="separate">
                     <img src="/resources/line.png" class="line">
-                    나의 정보 확인 및 수정하기
+                    새로운 일정이 있나요?
                     <img src="/resources/line.png" class="line">
                 </div>               
             </nav>
@@ -45,27 +45,31 @@
         <main>
             <p>…</p>
             <div id="register-input">
-                <form action="/member/update" method="post">
+                <form action="/schedule/write" method="post">
                     <ul>
                         <li>
-                            <input type="text" name="mem-id" value="${member.memId}" readonly>
+                            <input type="text" name="sche-title" placeholder="일정제목입력">
                         </li>
                         <li>
-                            <input type="password" name="mem-pw" placeholder="비밀번호 입력" value="${member.memPw}">
+                            <input type="text" name="sche-deadline" placeholder="그게언제죠?(yyyymmdd입력)"">
                         </li>
                         <li>
-                            <input type="text" name="mem-name" placeholder="사용할 이름 입력" value = "${member.memName}">
+                            <input type="text" name="sche-official-check" placeholder="공식/개인여부->라디오버튼으로 ">
                         </li>
                         <li>
-                            <input type="text" name="mem-enroll-date" value = "${member.memEnrollDate}" readonly>
+                            <input type="text" name="sche-todo" placeholder="무엇을 하나요?">
+                        </li>
+                        <li>
+                            <input type="text" name="sche-with-whom" placeholder="누구랑 할 건가요?">
+                        </li>
+                        <li>
+                            <input type="text" name="sche-to-where" placeholder="어디서 하나요?">
                         </li>
                     </ul>
                     <div>
-                        <button>수정하기</button>
+                        <button>일정추가하기</button>
                     </div>
-                    <div>
-                        <button><a href="/member/withdraw?mem-id=${sessionScope.memId}">탈퇴하기</button>
-                    </div>
+                    
                 </form>
             </div>
       

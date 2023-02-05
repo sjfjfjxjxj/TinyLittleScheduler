@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심플스케줄러</title>
+    <link rel="stylesheet" href="/resources/main.css">
+</head>
+<body>
+
+ 	<div id="container">
+       
+	    <div id="headernav">
+	        <header>
+	            <div id="logo"><a href="/index.jsp">심플스케줄러</a></div>
+	            
+ 	           	<form action = "/member/logout.do" method="post"> 
+	                 <div id="login-area5"><a href="/member/myInfo?mem-id=${sessionScope.memId}">님</a> 안녕하세요!</div>
+	                    <div id="login-area6"><a href=/member/logout.do><img src="/resources/logout.png" alt="로그아웃" id="logout" ></a></div>
+	                   
+ 	        	</form> 
+	        	    
+	        </header><br>
+	        <nav>
+	        	<div id="menus">
+                	<ul >
+	                    <li ><a href="#">나의 전체 일정 보기</a></li>
+	                    <li ><a href="#">공식 일정만 보기</a></li>
+	                    <li ><a href="#">개인 일정만 보기</a></li>
+	                    <li ><a href="#">날짜검색으로 일정 보기</a></li>
+	                    <li >¤</li>
+	                    <li ><a href="#">새 일정 입력하기</a></li>
+	                    <li ><a href="#">일정 수정하기</a></li>
+	                    <li ><a href="#">일정 삭제하기</a></li>
+                	</ul>
+                </div>
+	            <div id="separate">
+	                <img src="/resources/line.png" class="line">
+	                총 [n] 건의 전체 일정이 있어요.
+	                <img src="/resources/line.png" class="line">
+	            </div>
+	        </nav>
+	    </div>
+	    <main>
+            <ul>
+                <li class="when-howmanycases">
+                    [yyyy]년 [mm]월 [dd]일 - [n]건
+                    <li class="officheck-3wh">
+                        [개인일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                    </li>    
+                    <li class="officheck-3wh">
+                        [공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                    </li>
+                </li>
+                <li class="when-howmanycases">
+                    [yyyy]년 [mm]월 [dd]일 - [n]건
+                    <li class="officheck-3wh">
+                        [개인일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                    </li>    
+                    <li class="officheck-3wh">
+                        [공식일정] | [where]에서 [who]랑 [what]을 할 예정이에요
+                    </li>
+                </li>
+            </ul>
+
+	    
+	    </main>
+     
+     
+     
+     
+ 	   
+        <footer>
+            <div>ⓒTinyTinyProjectByMinaHeo</div>
+        </footer>
+    </div>
+
+</body>
+</html>
